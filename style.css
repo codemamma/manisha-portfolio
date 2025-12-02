@@ -299,8 +299,8 @@ body {
   text-align: center;
   background: var(--bg-alt);
   border-radius: 16px;
-  max-width: 900px;
-  margin-bottom: 3rem;
+  #max-width: 900px;
+  #margin-bottom: 3rem;
   border: 1px solid rgba(148, 163, 184, 0.2);
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
 }
