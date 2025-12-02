@@ -1,11 +1,11 @@
 :root {
-  --bg: #111214;
-  --bg-alt: #18191c;
+  --bg: #090a0f;        /* slightly cooler, deeper dark */
+  --bg-alt: #13141b;    /* used for contrast sections */
   --text: #f4f4f5;
   --muted: #a1a1aa;
-  --accent: #d4b0a4;
-  --accent-dark: #b89384;
-  --card: #1f2024;
+  --accent: #d9b7a7;    /* a touch lighter/warmer */
+  --accent-dark: #c19780;
+  --card: #181923;      /* cards slightly lighter than bg */
   --radius: 12px;
 }
 
@@ -19,7 +19,8 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
-  background: var(--bg);
+  background:
+	radial-gradient(circle at top, #202233 0, #090a0f 55%, #050509 100%);
   color: var(--text);
 }
 
@@ -63,6 +64,10 @@ body {
 .section {
   max-width: 1100px;
   margin: 0 auto;
+  background: rgba(12, 13, 20, 0.88);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
 }
 
 .section-kicker {
@@ -80,10 +85,12 @@ body {
 
 /* Hero */
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  background: radial-gradient(circle at top, #1b1c27 0, #101119 65%);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.6);
 }
 
 .hero-inner {
@@ -239,11 +246,13 @@ body {
 }
 
 .card {
-  background: var(--card);
+  background: linear-gradient(145deg, #181923, #141521);
   border-radius: var(--radius);
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
 }
 
 .card-img {
@@ -252,6 +261,7 @@ body {
   height: 190px;
   object-fit: cover;
   margin-bottom: 0.75rem;
+  filter: saturate(1.05);
 }
 
 .card-title {
@@ -277,6 +287,8 @@ body {
   border-radius: 16px;
   max-width: 900px;
   margin-bottom: 3rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
 }
 
 .contact-btn {
